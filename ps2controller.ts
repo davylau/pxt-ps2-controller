@@ -137,8 +137,6 @@ namespace ps2controller {
                 return pad[1] & 0x40 ? 0 : 1;
             case PS2Button.Square:
                 return pad[1] & 0x80 ? 0 : 1;
-            case PS2Button.Buttons:
-                return ~((pad[1] << 8) | pad[0]) & 0xffff;
         }
         return 0;
     }
