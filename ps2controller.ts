@@ -1,4 +1,4 @@
-//% weight=9 color="#4A86E8" icon="\uf11b"
+//% weight=9 color="#4A86E8" icon="\uf11b"  block="PS2 Controller"
 namespace ps2controller {
 
     let chipSelect = 0
