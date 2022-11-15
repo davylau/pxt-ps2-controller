@@ -23,13 +23,13 @@ namespace ps2controller {
 
 
     /**
-     * initstall PS2 Receiver Pin
+     * 设置手柄连接针脚
      * @param CLKPin SCK Pin; eg: DigitalPin.P13
      * @param DATPin MISO Pin; eg: DigitalPin.P14
      * @param CMDPin MOSI Pin; eg: DigitalPin.P15
      * @param CSPin  CS Pin; eg: DigitalPin.P16
      */
-    //% blockId=ps2_init_pin block="手柄初始化 CLK|%CLK|DAT|%DAT|CMD|%CMD|CS %CS"
+    //% blockId=ps2_init_pin block="设置手柄连接针脚 CLK|%CLK|DAT|%DAT|CMD|%CMD|CS %CS"
     //% weight=100
     //% inlineInputMode=inline
     export function initPS2Pin(CLKPin: DigitalPin, DATPin: DigitalPin, CMDPin: DigitalPin, CSPin: DigitalPin) {
@@ -94,7 +94,7 @@ namespace ps2controller {
     };
 
     /**
-     * PS2 button pressed
+     * 读取按键类型
      * @param b ps2 button;
      */
     //% weight=80
@@ -155,7 +155,7 @@ namespace ps2controller {
     };
 
     /**
-    * PS2 stick value
+    * 读取摇杆值
     * @param stick ps2 stick;
     */
     //% weight=70
@@ -178,7 +178,7 @@ namespace ps2controller {
     }
 
     /**
-    *  read game pad
+    *  读取手柄状态
     */
     //% weight=90
     //% block="读取手柄状态"
