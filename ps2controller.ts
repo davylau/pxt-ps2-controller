@@ -43,6 +43,7 @@ namespace ps2controller {
 
         pins.spiFormat(8, 3)
         pins.spiFrequency(250000)
+        basic.pause(300)
     }
 
     function send_command(transmit: Buffer): Buffer {
@@ -185,6 +186,7 @@ namespace ps2controller {
     export function readGamepad(): boolean {
         let buf = send_command(poll_cmd)
         if (buf[2] != 0x5a) {
+            basic.pause(30)
             return false;
         }
 
@@ -193,7 +195,8 @@ namespace ps2controller {
         }
 
         connected = true
-
+        basic.pause(30)
+        
         return true
     }
 
