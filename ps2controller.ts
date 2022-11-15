@@ -101,44 +101,44 @@ namespace ps2controller {
     //% weight=80
     //% block="键 %b 按下"
     //% b.fieldEditor="gridpicker" b.fieldOptions.columns=4
-    export function button_pressed(b: PS2Button): number {
-        if (!connected) return 0x00
+    export function button_pressed(b: PS2Button): boolean {
+        if (!connected) return false
 
         switch (b) {
             case PS2Button.Select:
-                return pad[0] & 0x01 ? 0 : 1;
+                return pad[0] & 0x01 ? false : true;
             case PS2Button.L3:
-                return pad[0] & 0x02 ? 0 : 1;
+                return pad[0] & 0x02 ? false : true;
             case PS2Button.R3:
-                return pad[0] & 0x04 ? 0 : 1;
+                return pad[0] & 0x04 ? false : true;
             case PS2Button.Start:
-                return pad[0] & 0x08 ? 0 : 1;
+                return pad[0] & 0x08 ? false : true;
             case PS2Button.Up:
-                return pad[0] & 0x10 ? 0 : 1;
+                return pad[0] & 0x10 ? false : true;
             case PS2Button.Right:
-                return pad[0] & 0x20 ? 0 : 1;
+                return pad[0] & 0x20 ? false : true;
             case PS2Button.Down:
-                return pad[0] & 0x40 ? 0 : 1;
+                return pad[0] & 0x40 ? false : true;
             case PS2Button.Left:
-                return pad[0] & 0x80 ? 0 : 1;
+                return pad[0] & 0x80 ? false : true;
             case PS2Button.L2:
-                return pad[1] & 0x01 ? 0 : 1;
+                return pad[1] & 0x01 ? false : true;
             case PS2Button.R2:
-                return pad[1] & 0x02 ? 0 : 1;
+                return pad[1] & 0x02 ? false : true;
             case PS2Button.L1:
-                return pad[1] & 0x04 ? 0 : 1;
+                return pad[1] & 0x04 ? false : true;
             case PS2Button.R1:
-                return pad[1] & 0x08 ? 0 : 1;
+                return pad[1] & 0x08 ? false : true;
             case PS2Button.Triangle:
-                return pad[1] & 0x10 ? 0 : 1;
+                return pad[1] & 0x10 ? false : true;
             case PS2Button.Circle:
-                return pad[1] & 0x20 ? 0 : 1;
+                return pad[1] & 0x20 ? false : true;
             case PS2Button.Cross:
-                return pad[1] & 0x40 ? 0 : 1;
+                return pad[1] & 0x40 ? false : true;
             case PS2Button.Square:
-                return pad[1] & 0x80 ? 0 : 1;
+                return pad[1] & 0x80 ? false : true;
         }
-        return 0;
+        return false;
     }
 
     // PS2 stick values
