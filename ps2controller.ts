@@ -65,23 +65,32 @@ namespace ps2controller {
     }
 
     export enum PS2Button {
+        //% blockId="Select" block="选择(Select)按键"
         Select,
+        //% blockId="Start" block="开始(Start)按键"
         Start,
+        //% blockId="Right" block="右方向键"
         Up,
+        //% blockId="Down" block="下方向键"
         Down,
         L1,
         R1,
+        //% blockId="Left" block="左方向键"
         Left,
+        //% blockId="Right" block="右方向键"
         Right,
         L2,
         R2,
+        //% blockId="Triangle" block="三角形(△)按键"
         Triangle,
+        //% blockId="Cross" block="叉型(×)按键"
         Cross,
         L3,
         R3,
+        //% blockId="Square" block="正方形(□)按键"
         Square,
+         //% blockId="Circle" block="圆型(○)按键"
         Circle,
-        Buttons
     };
 
     /**
@@ -89,7 +98,7 @@ namespace ps2controller {
      * @param b ps2 button;
      */
     //% weight=80
-    //% block="按住键 %b"
+    //% block="键 %b 按下"
     //% b.fieldEditor="gridpicker" b.fieldOptions.columns=4
     export function button_pressed(b: PS2Button): number {
         if (!connected) return 0x00
@@ -135,9 +144,13 @@ namespace ps2controller {
 
     // PS2 stick values
     export enum PSS {
+        //% blockId="LX" block="左侧摇杆x的值"
         LX,
+        //% blockId="RX" block="右侧摇杆X的值"
         RX,
+        //% blockId="LY" block="左侧摇杆Y的值"
         LY,
+        //% blockId="RY" block="右侧摇杆Y的值"
         RY
     };
 
