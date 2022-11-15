@@ -70,15 +70,15 @@ namespace ps2controller {
         Select,
         //% blockId="Start" block="开始(Start)按键"
         Start,
-        //% blockId="Right" block="右方向键"
+        //% blockId="Right" block="上方向(↑)键"
         Up,
-        //% blockId="Down" block="下方向键"
+        //% blockId="Down" block="下方向(↓)键"
         Down,
         L1,
         R1,
-        //% blockId="Left" block="左方向键"
+        //% blockId="Left" block="左方向(←)键"
         Left,
-        //% blockId="Right" block="右方向键"
+        //% blockId="Right" block="右方向(→)键"
         Right,
         L2,
         R2,
