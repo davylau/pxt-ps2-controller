@@ -25,9 +25,9 @@ namespace ps2controller {
     /**
      * 设置手柄连接针脚
      * @param CLKPin SCK Pin; eg: DigitalPin.P13
-     * @param DATPin MISO Pin; eg: DigitalPin.P14
-     * @param CMDPin MOSI Pin; eg: DigitalPin.P15
-     * @param CSPin  CS Pin; eg: DigitalPin.P16
+     * @param DATPin MISO Pin; eg: DigitalPin.P10
+     * @param CMDPin MOSI Pin; eg: DigitalPin.P11
+     * @param CSPin  CS Pin; eg: DigitalPin.P12
      */
     //% blockId=ps2_init_pin block="设置手柄连接针脚 CLK|%CLK|DAT|%DAT|CMD|%CMD|CS %CS"
     //% weight=100
