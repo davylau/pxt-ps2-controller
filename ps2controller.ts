@@ -29,7 +29,7 @@ namespace ps2controller {
      * @param CMDPin MOSI Pin; eg: DigitalPin.P15
      * @param CSPin  CS Pin; eg: DigitalPin.P16
      */
-    //% blockId=ps2_init_pin block="PS2PIN CLK|%CLK|DAT|%DAT|CMD|%CMD|CS %CS"
+    //% blockId=ps2_init_pin block="手柄初始化 CLK|%CLK|DAT|%DAT|CMD|%CMD|CS %CS"
     //% weight=100
     //% inlineInputMode=inline
     export function initPS2Pin(CLKPin: DigitalPin, DATPin: DigitalPin, CMDPin: DigitalPin, CSPin: DigitalPin) {
@@ -89,7 +89,7 @@ namespace ps2controller {
      * @param b ps2 button;
      */
     //% weight=80
-    //% block="button pressed %b"
+    //% block="按住键 %b"
     //% b.fieldEditor="gridpicker" b.fieldOptions.columns=4
     export function button_pressed(b: PS2Button): number {
         if (!connected) return 0x00
@@ -146,7 +146,7 @@ namespace ps2controller {
     * @param stick ps2 stick;
     */
     //% weight=70
-    //% block="stick value %stick"
+    //% block="摇杆值 %stick"
     //% stick.fieldEditor="gridpicker" stick.fieldOptions.columns=2
     export function stick_value(stick: PSS): number {
         if (!connected) return 0x00
@@ -168,7 +168,7 @@ namespace ps2controller {
     *  read game pad
     */
     //% weight=90
-    //% block="read Gamepad"
+    //% block="读取手柄状态"
     export function readGamepad(): boolean {
         let buf = send_command(poll_cmd)
         if (buf[2] != 0x5a) {
